@@ -52,3 +52,4 @@ s consists of parentheses only '()[]{}'.
 
 3. Check all the alphabet is available in the string
    "The quick brown fox jumps over the lazy dog"
+4. Relace first char of each word with capital letter.
