@@ -53,4 +53,4 @@ s consists of parentheses only '()[]{}'.
 3. Check all the alphabet is available in the string
    "The quick brown fox jumps over the lazy dog"
 4. Replace first char of each word with capital letter.
-5. Reverse a number.
+5. Reverse a number
