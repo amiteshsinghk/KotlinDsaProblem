@@ -49,3 +49,6 @@ Output: false
 Constraints:
 1 <= s.length <= 104
 s consists of parentheses only '()[]{}'.
+
+3. Check all the alphabet is available in the string
+   "The quick brown fox jumps over the lazy dog"
