@@ -54,3 +54,4 @@ s consists of parentheses only '()[]{}'.
    "The quick brown fox jumps over the lazy dog"
 4. Replace first char of each word with capital letter.
 5. Reverse a number
+6. Count the number of repeated character in a string.
