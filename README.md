@@ -57,4 +57,5 @@ s consists of parentheses only '()[]{}'.
 6. Count the number of repeated character in a string.
 7. CountCharacter :Java Program to count the total number of characters in a string
 8. PunctuationCount :Java Program to Count the Total Number of Punctuation Characters Exists in a String
-9. 
+9. VowelConstantCount : Java Program to count the total number of vowels and consonants in a string
+10. 
