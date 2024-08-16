@@ -56,3 +56,5 @@ s consists of parentheses only '()[]{}'.
 5. Reverse a number
 6. Count the number of repeated character in a string.
 7. CountCharacter :Java Program to count the total number of characters in a string
+8. PunctuationCount :Java Program to Count the Total Number of Punctuation Characters Exists in a String
+9. 
