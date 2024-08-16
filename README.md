@@ -55,3 +55,4 @@ s consists of parentheses only '()[]{}'.
 4. Replace first char of each word with capital letter.
 5. Reverse a number
 6. Count the number of repeated character in a string.
+7. CountCharacter :Java Program to count the total number of characters in a string
