@@ -60,3 +60,5 @@ s consists of parentheses only '()[]{}'.
 9. VowelConstantCount : Java Program to count the total number of vowels and consonants in a string
 10. Anagram :Kotlin Program to determine whether two strings are the anagram.
 11. DivideStringInEqualPart : Kotlin Program to divide a string in 'N' equal parts.
+12. SubsetOfString : Kotlin Program to find all subsets of a string
+13. 
