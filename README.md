@@ -55,9 +55,9 @@ s consists of parentheses only '()[]{}'.
 4. Replace first char of each word with capital letter.
 5. Reverse a number
 6. Count the number of repeated character in a string.
-7. CountCharacter :Java Program to count the total number of characters in a string
-8. PunctuationCount :Java Program to Count the Total Number of Punctuation Characters Exists in a String
-9. VowelConstantCount : Java Program to count the total number of vowels and consonants in a string
+7. CountCharacter :Kotlin Program to count the total number of characters in a string
+8. PunctuationCount :Kotlin Program to Count the Total Number of Punctuation Characters Exists in a String
+9. VowelConstantCount : Kotlin Program to count the total number of vowels and consonants in a string
 10. Anagram :Kotlin Program to determine whether two strings are the anagram.
 11. DivideStringInEqualPart : Kotlin Program to divide a string in 'N' equal parts.
 12. SubsetOfString : Kotlin Program to find all subsets of a string

@@ -1,5 +1,6 @@
 //Kotlin Program to find all subsets of a string
 //The subset of a string is the character or the group of characters that are present inside the string.
+//FUN subset are F, FU, FUN, U, UN, N
 fun main(){
     subsetOfString("FUN")
 }

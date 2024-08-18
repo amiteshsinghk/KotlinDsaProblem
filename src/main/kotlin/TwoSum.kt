@@ -38,7 +38,6 @@ fun twoSum(nums: IntArray, target: Int) : IntArray{
     loop@  for(i in nums.indices){
         for(j in i+1 until(nums.size)){
             if(target == nums[i] + nums[j]){
-                var m = intArrayOf()
                 arra = arra.plus(i).plus(j)
                 break@loop
             }

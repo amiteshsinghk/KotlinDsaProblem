@@ -1,4 +1,4 @@
-//Java Program to count the total number of characters in a string
+//Kotlin Program to count the total number of characters in a string
 fun main(){
   println("count characters using inbuilt Function ::"+countCharactersUsingInbuiltFunction("The best of both worlds"))
     println("count characters Without using inbuilt Function ::"+countCharacterWithoutUsingInbuiltFunction("The best of both worlds"))
