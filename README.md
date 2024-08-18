@@ -62,3 +62,4 @@ s consists of parentheses only '()[]{}'.
 11. DivideStringInEqualPart : Kotlin Program to divide a string in 'N' equal parts.
 12. SubsetOfString : Kotlin Program to find all subsets of a string
 13. RepeatingSequenceOfString : Kotlin Program to find the longest repeating sequence in a string
+14. PermutationOfString : Kotlin Program to find all the permutations of a string
