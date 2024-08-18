@@ -61,4 +61,4 @@ s consists of parentheses only '()[]{}'.
 10. Anagram :Kotlin Program to determine whether two strings are the anagram.
 11. DivideStringInEqualPart : Kotlin Program to divide a string in 'N' equal parts.
 12. SubsetOfString : Kotlin Program to find all subsets of a string
-13. 
+13. RepeatingSequenceOfString : Kotlin Program to find the longest repeating sequence in a string
