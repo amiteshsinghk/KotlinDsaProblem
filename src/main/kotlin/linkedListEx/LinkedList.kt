@@ -86,22 +86,9 @@ class LinkedList <T>{
         return  result
     }
 
-    fun reverseListIterator(){
-        if(head?.next == null || head == null) return
-        var previousNode = head
-        var currentNode = head?.next
-        while (currentNode != null){
-            var nextNode = currentNode.next
-            currentNode.next = previousNode
-            previousNode = currentNode
-            currentNode = nextNode
-        }
-        head?.next = null
-        head = previousNode
-    }
 // https://www.youtube.com/watch?v=t7YaoQOFXzk&list=PLfqMhTWNBTe3LtFWcvwpqTkUSlB32kJop&index=29
 
-    fun reverseList(){
+    fun reverseListIterator(){
         if (head == null || head?.next == null) return
         var previousNode = head
         var currentNode = previousNode?.next
@@ -122,23 +109,6 @@ class LinkedList <T>{
         head.next = null
         return newHead
 
-    }
-
-    fun swapLists(heads: Node<T>?): Node<T>?{
-        if (heads == null || heads.next == null) return heads
-        var dummyNode = Node(0 as T)
-        dummyNode.next = heads
-        var currentNode : Node<T>?= dummyNode
-        while (currentNode?.next != null && currentNode?.next?.next != null){
-            var firstItem = currentNode.next
-            var secondItem = currentNode?.next?.next
-            firstItem?.next = secondItem?.next
-            secondItem?.next = firstItem
-            currentNode.next = secondItem
-            currentNode = firstItem
-
-        }
-        return dummyNode.next
     }
 
     fun swapList(heads : Node<T>?):Node<T>?{
@@ -191,25 +161,72 @@ class LinkedList <T>{
         return dummyNode?.next
     }
 
-    fun removeNthFromEnds(head:  Node<T>?, n: Int):  Node<T>? {
-       if (head== null) return null
-        var nodeSize = 0
-        var current = head
-        while (current != null){
-            nodeSize++
-            current = current.next
+    fun getMiddle(head: Node<T>?): Node<T>? {
+        var fast = head
+        var slow = head
+        while (fast?.next != null && fast?.next?.next != null) {
+            fast = fast?.next?.next
+            slow = slow?.next
         }
-         var itemNode = head
-        var preItemIndex = nodeSize- n
-        var i=1
-        while (i != preItemIndex){
-            itemNode = itemNode?.next
-            i++
-        }
-        itemNode?.next = itemNode?.next?.next
-        return head
+        return slow
     }
 
+
+    fun fromMiddle(head: Node<T>?):Node<T>?{
+        var hare = head
+        var turtle = head
+        while(hare?.next != null && hare?.next?.next != null){
+            hare = hare?.next?.next
+            turtle = turtle?.next
+        }
+        return turtle
+
+    }
+
+    fun reverse(head: Node<T>?):Node<T>?{
+        var prev : Node<T>?= null
+        var current = head
+        while (current != null){
+            var next = current.next
+            current.next = prev
+            prev = current
+            current = next
+        }
+        return prev
+    }
+
+    fun isPalindromeLinkedList(head : Node<T>?):Boolean{
+        if(head == null || head.next == null) return true
+        println("head :: $head")
+        val middle = fromMiddle(head)
+        println("middle :: $middle")
+        var secondHalfStart = reverse(middle?.next)
+        println("secondHalfStart :: $secondHalfStart")
+        var firstHalfStart = head
+
+        while (secondHalfStart != null){
+            if (firstHalfStart?.value != secondHalfStart.value) return false
+            firstHalfStart = firstHalfStart?.next
+            secondHalfStart = secondHalfStart.next
+        }
+        return true
+    }
+
+    /*
+    * Given head, the head of a linked list, determine if the linked list has a cycle in it.
+There is a cycle in a linked list if there is some node in the list that can be reached again by continuously following the next pointer. Internally, pos is used to denote the index of the node that tail's next pointer is connected to. Note that pos is not passed as a parameter.
+Return true if there is a cycle in the linked list. Otherwise, return false.
+    * */
+    fun hasCycle(head: Node<T>?): Boolean {
+        var fastPointer = head
+        var slowPointer = head
+        while(fastPointer != null &&  fastPointer.next != null){
+            fastPointer = fastPointer?.next?.next
+            slowPointer = slowPointer?.next
+            if(fastPointer == slowPointer) return true
+        }
+        return false
+    }
 
 
 
