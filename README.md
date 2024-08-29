@@ -123,7 +123,7 @@ s consists of parentheses only '()[]{}'.
     Moving n-1 discs to an auxiliary peg.
     Moving the nth disc directly to the destination peg.
     Moving the n-1 discs from the auxiliary peg to the destination peg.
-20. Find first and Last occurrence of an element in a string.
+20. XPowerNStackHeightLogN : Find first and Last occurrence of an element in a string.
     Input : abaacdaefaah
     Output : first occurrence is 0 and second is 10 
 21. FirstAndLastOccurrenceOfElement : Find first and Last occurrence of an element in a string.

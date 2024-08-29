@@ -1,4 +1,4 @@
-package recurssion
+package recursion
 
 /*
 * Calculate x^n, where the stack height = logn
