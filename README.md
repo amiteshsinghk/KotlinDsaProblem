@@ -137,3 +137,7 @@ s consists of parentheses only '()[]{}'.
 23. MoveElementAtTheEndOfString : Move all an element at the end  of string.
     Input : axbcxxd char-> x 
     Output : abcdxxx
+24. Remove Duplicates from string    
+    Input : aabbccda
+    Output : abcd
+
