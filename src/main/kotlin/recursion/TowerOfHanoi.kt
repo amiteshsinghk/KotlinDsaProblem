@@ -1,4 +1,4 @@
-package recurssion
+package recursion
 
 /*
 * print tower of hanoi
