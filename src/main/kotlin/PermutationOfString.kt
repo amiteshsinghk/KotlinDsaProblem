@@ -5,9 +5,23 @@
 fun main(){
     val item ="ABC"
     val itemLength = item.length
-    findPermutationOfString(item, 0,itemLength)
+//    findPermutationOfString(item, 0,itemLength)
+    findPermutationOfStringRecursion(item,"")
 
 }
+fun findPermutationOfStringRecursion(str: String, permutation: String){
+    if(str.isEmpty()){
+        println(permutation)
+        return
+    }
+
+    for (i in 0 until str.length){
+        var charA = str[i]
+        var substring = str.substring(0,i)+str.substring(i+1)
+        findPermutationOfStringRecursion(substring,permutation+charA)
+    }
+}
+
 fun findPermutationOfString(s:String, startIndex:Int, endIndex:Int){
     if (startIndex == endIndex-1) println(s)// printing the value when the loop item complete
     else{
