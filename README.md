@@ -113,7 +113,7 @@ s consists of parentheses only '()[]{}'.
             Transfer disc 2 from source H to D
             Transfer disc 1 from source S to D
 18. ReverseAString : Reverse a string using iterator and recursion.
-19. TowerOfHanoi :print tower of hanoi
+19. TowerOfHanoi : print tower of hanoi
     Explanation:
     The Tower of Hanoi is a mathematical puzzle where you need to move a stack of discs from one peg to another, using a third peg as a helper, following these rules:
     Move only one disc at a time.
@@ -123,3 +123,14 @@ s consists of parentheses only '()[]{}'.
     Moving n-1 discs to an auxiliary peg.
     Moving the nth disc directly to the destination peg.
     Moving the n-1 discs from the auxiliary peg to the destination peg.
+20. Find first and Last occurrence of an element in a string.
+    Input : abaacdaefaah
+    Output : first occurrence is 0 and second is 10 
+21. Find first and Last occurrence of an element in a string.
+    Input : "abaacdaefaah" char "a"
+    Output : first = 0 last = 10
+22. ArrayIsSorted : Check array is sorted
+    Input : [1,2,3,3]
+    Output : false
+    Input : [1,2,3,4]
+    Output : true
