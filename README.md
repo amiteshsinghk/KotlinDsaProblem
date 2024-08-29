@@ -126,7 +126,7 @@ s consists of parentheses only '()[]{}'.
 20. Find first and Last occurrence of an element in a string.
     Input : abaacdaefaah
     Output : first occurrence is 0 and second is 10 
-21. Find first and Last occurrence of an element in a string.
+21. FirstAndLastOccurrenceOfElement : Find first and Last occurrence of an element in a string.
     Input : "abaacdaefaah" char "a"
     Output : first = 0 last = 10
 22. ArrayIsSorted : Check array is sorted
