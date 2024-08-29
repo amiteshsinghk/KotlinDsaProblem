@@ -134,3 +134,6 @@ s consists of parentheses only '()[]{}'.
     Output : false
     Input : [1,2,3,4]
     Output : true
+23. MoveElementAtTheEndOfString : Move all an element at the end  of string.
+    Input : axbcxxd char-> x 
+    Output : abcdxxx
