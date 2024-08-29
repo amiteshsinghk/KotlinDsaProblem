@@ -5,11 +5,11 @@
 * */
 
 fun main(){
-    println(moveElementAtTheEnds("axbcxxd",'x'))
-    moveElementAtTheEnd("axbcxxd",'x',0,0,"")
+    println(moveElementAtTheEnd("axbcxxd",'x'))
+    moveElementAtTheEndRecursion("axbcxxd",'x',0,0,"")
 }
 
-fun moveElementAtTheEnd(s: String, element: Char, index : Int, count: Int, newString: String){
+fun moveElementAtTheEndRecursion(s: String, element: Char, index : Int, count: Int, newString: String){
     if (index == s.length){
         var item = newString
         for (i in 1..count) {
@@ -20,15 +20,15 @@ fun moveElementAtTheEnd(s: String, element: Char, index : Int, count: Int, newSt
     }
 
     if (s[index] == element) {
-        moveElementAtTheEnd(s, element, index + 1, count + 1, newString)
+        moveElementAtTheEndRecursion(s, element, index + 1, count + 1, newString)
     }else {
         val n =newString+s[index]
-        moveElementAtTheEnd(s, element, index + 1, count, n)
+        moveElementAtTheEndRecursion(s, element, index + 1, count, n)
     }
 
 }
 
-fun moveElementAtTheEnds(s: String, element: Char):String{
+fun moveElementAtTheEnd(s: String, element: Char):String{
     val newItem = StringBuilder()
     val elementItem = StringBuilder()
     for (i in s.indices){
