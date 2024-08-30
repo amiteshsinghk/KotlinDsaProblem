@@ -147,4 +147,7 @@ s consists of parentheses only '()[]{}'.
     it  cant't move backward or upward
     Input : 3,3
     Output : 6
+27. Place Tiles of size 1xm in a floor of size n*m
+    input : n=4, m=2
+    Output : 5
 
