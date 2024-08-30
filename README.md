@@ -140,7 +140,11 @@ s consists of parentheses only '()[]{}'.
 24. RemoveDuplicatesFromString : Remove Duplicates from string    
     Input : aabbccda
     Output : abcd
-25. SubsequenceOfString : Find the subsequence of string
+25. Imp : SubsequenceOfString : Find the subsequence of string
     Input: ABC
     Output: ABC,AB,AC,A,BC,B,C,
+26. constraint : it will only move in the forward direction or downward
+    it  cant't move backward or upward
+    Input : 3,3
+    Output : 6
 
