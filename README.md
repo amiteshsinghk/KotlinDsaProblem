@@ -150,4 +150,7 @@ s consists of parentheses only '()[]{}'.
 27. Place Tiles of size 1xm in a floor of size n*m
     input : n=4, m=2
     Output : 5
+28. Find the number of ways in which you can invite n people to your party, single or in pairs
+    Input : 4
+    Output : 10
 
