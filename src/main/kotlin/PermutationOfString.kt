@@ -5,20 +5,24 @@
 fun main(){
     val item ="ABC"
     val itemLength = item.length
-//    findPermutationOfString(item, 0,itemLength)
+    findPermutationOfString(item, 0,itemLength)
     findPermutationOfStringRecursion(item,"")
 
 }
 fun findPermutationOfStringRecursion(str: String, permutation: String){
-    if(str.isEmpty()){
+    if (str.isEmpty()){
         println(permutation)
         return
     }
-
     for (i in 0 until str.length){
-        var charA = str[i]
-        var substring = str.substring(0,i)+str.substring(i+1)
-        findPermutationOfStringRecursion(substring,permutation+charA)
+        val charAt = str[i]
+
+        //abc -> ab
+        //substring(0,i) it will not include the last character. So if the i= 0 and str = abc than it will give a
+        //substring(i+1) it will the charcter starting from i+1 till the end. Not i = 1 tha i+1 = 2, than it will give c.
+        // So the str.substring(0,i)+str.substring(i+1) will give ac.
+        val newString = str.substring(0,i)+str.substring(i+1)
+        findPermutationOfStringRecursion(newString,permutation+charAt)
     }
 }
 
@@ -34,63 +38,10 @@ fun findPermutationOfString(s:String, startIndex:Int, endIndex:Int){
 
 fun swipeNumber(s:String, i:Int, j :Int) : String{
     val item = s.toCharArray()
-    var temp :Char? = null
+    val temp: Char?
     temp = item[i]
     item[i] = item[j]
     item[j] = temp
     return String(item)
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*fun main(){
-    var item =  "ABC"
-    var itemLength = item.length
-    generatePermutation(item,0,itemLength)
-}
-fun generatePermutation(str: String, start: Int, end: Int) {
-    if (start == end - 1) {
-        println(str)
-    } else {
-        for (i in start until end) {
-            // Swapping the string by fixing a character
-            val swappedStr = swipeCharacter(str, start, i)
-            // Recursively calling function generatePermutation() for rest of the characters
-            generatePermutation(swappedStr, start + 1, end)
-            // Backtracking is automatically handled as strings are immutable in Kotlin
-        }
-    }
-}
-
-fun swipeCharacter(s:String, i: Int, j : Int ):String{
-    val item = s.toCharArray()
-    var temp :Char?=null
-    temp = item[i]
-    item[i] =item[j]
-    item[j] = temp
-    return String(item)
-}*/
