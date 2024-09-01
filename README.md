@@ -155,4 +155,5 @@ s consists of parentheses only '()[]{}'.
     Output : 10
 29. Bubble Sort
 30. Selection Sort
+31. Insertion Sort
 
