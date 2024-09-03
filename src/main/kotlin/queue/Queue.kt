@@ -1,14 +1,14 @@
-package Queue
+package queue
 
 class Queue(private var size: Int) {
-    private var arr = ArrayList<Int>(size)
+    private var arr = IntArray(size)
     private var rear = -1
 
     fun isEmpty(): Boolean {
         return rear == -1
     }
 
-    //    Data is added at the end. If the queue is empty, then first and rear both are same.
+    //  Data is added at the end. If the queue is empty, then first and rear both are same.
     //  Time complexity = O(1)
     fun add(data: Int) {
         if (rear == size - 1) {
@@ -16,7 +16,7 @@ class Queue(private var size: Int) {
             return
         }
         rear++
-        arr.add(data)
+        arr[rear] = data
     }
 
     //    It will remove the item from the front.
