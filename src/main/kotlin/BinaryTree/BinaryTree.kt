@@ -87,6 +87,7 @@ fun countOfNodes(nodeBt: NodeBt?): Int{
     return leftCount + rightCount + 1
 }
 
+// Time Complexity O(n)
 fun sumOfNode(nodeBt: NodeBt?): Int{
     if (nodeBt == null) return 0
     var leftSum = sumOfNode(nodeBt?.left)
@@ -94,7 +95,23 @@ fun sumOfNode(nodeBt: NodeBt?): Int{
     return leftSum + rightSum + nodeBt.data
 }
 
+// Time Complexity O(n)
+fun heightOfTree(nodeBt: NodeBt?): Int{
+    if (nodeBt == null) return 0
+    val leftHeight = heightOfTree(nodeBt.left)
+    val rightHeight = heightOfTree(nodeBt.right)
+    return Math.max(leftHeight, rightHeight) +1
+}
 
+// Time Complexity O(n^2)
+fun diameter(nodeBt: NodeBt?): Int{
+    if (nodeBt == null) return 0
+    val leftDiameter = diameter(nodeBt.left)
+    val rightDiameter = diameter(nodeBt.right)
+    val diameter3 = heightOfTree(nodeBt.left) + heightOfTree(nodeBt.right) + 1
+    return Math.max(diameter3, Math.max(leftDiameter, rightDiameter))
+
+}
 
 fun main() {
     val listNodes = mutableListOf<Int>(1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1)
@@ -111,4 +128,6 @@ fun main() {
     println()
     println("Count of nodes :: ${countOfNodes(root)}")
     println("Sum of nodes :: ${sumOfNode(root)}")
+    println("Height of tree ${heightOfTree(root)}")
+    println("Diameter of tree ${diameter(root)}")
 }
