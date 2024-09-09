@@ -16,6 +16,7 @@ class BinaryTree {
 }
 
 // DFS -> Depth search property
+// In preorder transversal first print root than left subtree than right subtree.
 // Root -> leftSubtree -> RightSubtree
 // Time Complexity O(n)
 fun preorderTransversal(root: NodeBt?) {
@@ -28,6 +29,7 @@ fun preorderTransversal(root: NodeBt?) {
 }
 
 // DFS -> Depth search property
+// In inorder transversal first print left subtree than root than right subtree.
 // LeftSubtree ->Root -> RightSubtree
 // Time Complexity O(n)
 fun inorderTraversal(root: NodeBt?) {
@@ -38,7 +40,8 @@ fun inorderTraversal(root: NodeBt?) {
 }
 
 // DFS -> Depth search property
-//leftSubtree -> RightSubtree -> Root
+// In postorder transversal first print left subtree than right subtree than root.
+// leftSubtree -> RightSubtree -> Root
 // Time Complexity O(n)
 fun postorderTraversal(root: NodeBt?) {
     if (root == null) return
