@@ -78,7 +78,7 @@ s consists of parentheses only '()[]{}'.
    output :  5
 9. VowelConstantCount : Kotlin Program to count the total number of vowels and consonants in a string
    input :"This is a really simple sentence"
-   output : 5
+   output : Vowels 10, Constant 17
 10. Anagram :Kotlin Program to determine whether two strings are the anagram.
     input :"Brag","Grab"
     output : Brag and Grab are Anagram
