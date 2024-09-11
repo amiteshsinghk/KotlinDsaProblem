@@ -19,7 +19,7 @@ fun findPermutationOfStringRecursion(str: String, permutation: String){
 
         //abc -> ab
         //substring(0,i) it will not include the last character. So if the i= 0 and str = abc than it will give a
-        //substring(i+1) it will the character starting from i+1 till the end. Not i = 1 tha i+1 = 2, than it will give c.
+        //substring(i+1) it will the character starting from i+1 till the end. Note i = 1 tha i+1 = 2, than it will give c.
         // So the str.substring(0,i)+str.substring(i+1) will give ac.
         val newString = str.substring(0,i)+str.substring(i+1)
         findPermutationOfStringRecursion(newString,permutation+charAt)
