@@ -31,6 +31,7 @@ fun fibonacciTriangle(num: Int) {
 
 }
 
+// Write a programme to print fibonacci Series
 fun printFibonacciSeries(num: Int) {
     var firstNum = 1
     var secondNum = 1
