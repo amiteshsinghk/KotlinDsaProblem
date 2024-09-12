@@ -192,5 +192,5 @@ s consists of parentheses only '()[]{}'.
 39. Print all prime numbers less than or equal to N
 40. LCM
 41. HCF
-42. 
+42. Compute average of two numbers without overflow
 
