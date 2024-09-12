@@ -144,7 +144,7 @@ s consists of parentheses only '()[]{}'.
     Input: ABC
     Output: ABC,AB,AC,A,BC,B,C,
 26. constraint : it will only move in the forward direction or downward
-    it  cant't move backward or upward
+    it  can't move backward or upward
     Input : 3,3
     Output : 6
 27. Place Tiles of size 1xm in a floor of size n*m
@@ -162,11 +162,16 @@ s consists of parentheses only '()[]{}'.
 33. Write a Program to Change Binary to Decimal Number?
     Input: 10001
     Output: 17
-34. Given a number x, determine whether the given number is Armstrong Number or not.
+34. ArmstrongNumber: Given a number x, determine whether the given number is Armstrong Number or not.
     An Armstrong number (also known as a Narcissistic number or pluperfect digital invariant) is a number
     that is equal to the sum of its own digits each raised to the power of the number of digits.
     Input : 153: 1^3 + 5^3 + 3^3 = 1 + 125+ 27 = 153
     Output : true
     Input : 152: 1^3 + 5^3 + 3^3 = 1 + 125+ 8 = 134
     Output : false
+35. Write a program to find HCF of two numbers without using recursion.
+    Input : 12, 144
+    Output : 12
+    Input : 12, 143
+    Output : 1
 
