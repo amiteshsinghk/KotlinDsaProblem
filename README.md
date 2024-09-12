@@ -156,4 +156,10 @@ s consists of parentheses only '()[]{}'.
 29. Bubble Sort
 30. Selection Sort
 31. Insertion Sort
+32. DecimalToBinary: Write a Program to Change Decimal Number to Binary?
+    Input: 17
+    Output: 10001
+33. Write a Program to Change Binary to Decimal Number?
+    Input: 10001
+    Output: 17
 
