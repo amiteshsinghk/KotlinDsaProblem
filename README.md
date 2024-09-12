@@ -174,4 +174,9 @@ s consists of parentheses only '()[]{}'.
     Output : 12
     Input : 12, 143
     Output : 1
+36. Program to check if a given year is leap year
+    Input : 2100
+    Output : false
+    Input : 1600
+    Output : true
 
