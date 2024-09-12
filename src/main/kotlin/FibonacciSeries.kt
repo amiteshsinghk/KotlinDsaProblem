@@ -4,22 +4,22 @@
 
 //Write a kotlin Program to generate Fibonacci Triangle.
 
-fun main(){
+fun main() {
     printFibonacciSeries(10)
     fibonacciTriangle(3)
 }
 
 //Write a kotlin Program to generate Fibonacci Triangle.
 //n= number of rows
-fun fibonacciTriangle(num: Int){
+fun fibonacciTriangle(num: Int) {
     var firstNum = 1
     var secondNum = 1
     var sum: Int
     println(firstNum)
     print("$secondNum ")
-    for (i in 1..num){
+    for (i in 1..num) {
         var j = i
-        while (j>=0){
+        while (j >= 0) {
             sum = firstNum + secondNum
             print("$sum ")
             firstNum = secondNum
@@ -31,13 +31,13 @@ fun fibonacciTriangle(num: Int){
 
 }
 
-fun printFibonacciSeries(num: Int){
+fun printFibonacciSeries(num: Int) {
     var firstNum = 1
     var secondNum = 1
     var sum: Int
-    print ("$firstNum $secondNum ")
+    print("$firstNum $secondNum ")
 //  as two number is already printed. So we need to subtract the 2 from total count.
-    for (i in 1.. num-2){
+    for (i in 1..num - 2) {
         sum = firstNum + secondNum
         print("$sum ")
         firstNum = secondNum
