@@ -1,7 +1,7 @@
-// Write a program to find HCF of two numbers without using recursion.
+// Write a program to find HCF of two numbers.
 
 fun main() {
-    println(findHCF(12, 144))
+    println(findHCF(36, 60))
     println(findHcfRecursion(12, 143))
 }
 

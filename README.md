@@ -169,7 +169,7 @@ s consists of parentheses only '()[]{}'.
     Output : true
     Input : 152: 1^3 + 5^3 + 3^3 = 1 + 125+ 8 = 134
     Output : false
-35. Write a program to find HCF of two numbers without using recursion.
+35. Write a program to find HCF of two numbers.
     Input : 12, 144
     Output : 12
     Input : 12, 143
