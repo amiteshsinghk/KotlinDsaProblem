@@ -190,4 +190,7 @@ s consists of parentheses only '()[]{}'.
     Input : 4,6,8, 10
     Output : false
 39. Print all prime numbers less than or equal to N
+40. LCM
+41. HCF
+42. 
 
