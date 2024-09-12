@@ -11,6 +11,7 @@ fun main() {
     println(binaryToDecimals("10001"))
 }
 
+//Write a Program to Change Binary to Decimal Number?
 fun binaryToDecimals(binary: String): Int {
     var decimal = 0
     var base = 1
@@ -22,6 +23,7 @@ fun binaryToDecimals(binary: String): Int {
     return decimal
 }
 
+// Write a Program to Change Decimal Number to Binary?
 fun convertDecimalToBinary(num: Int): String {
     var number = num
     var binaryConversion = ""
