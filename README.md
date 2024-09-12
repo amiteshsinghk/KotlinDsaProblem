@@ -184,4 +184,10 @@ s consists of parentheses only '()[]{}'.
     Output : true
     Input : abbc
     Output : false
+38. Check given number is prime number
+    Input:2, 5, 7,11
+    output : True
+    Input : 4,6,8, 10
+    Output : false
+39. Print all prime numbers less than or equal to N
 
