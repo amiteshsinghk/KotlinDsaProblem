@@ -5,7 +5,6 @@ fun main() {
     println(findHcfRecursion(12, 143))
 }
 
-
 fun findHcfRecursion(num1: Int, num2: Int): Int {
     return if (num2 == 0) {
         num1
