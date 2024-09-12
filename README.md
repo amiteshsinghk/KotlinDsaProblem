@@ -179,4 +179,9 @@ s consists of parentheses only '()[]{}'.
     Output : false
     Input : 1600
     Output : true
+37. Program to Check if a Given String is Palindrome 
+    Input : abba
+    Output : true
+    Input : abbc
+    Output : false
 
