@@ -162,4 +162,11 @@ s consists of parentheses only '()[]{}'.
 33. Write a Program to Change Binary to Decimal Number?
     Input: 10001
     Output: 17
+34. Given a number x, determine whether the given number is Armstrong Number or not.
+    An Armstrong number (also known as a Narcissistic number or pluperfect digital invariant) is a number
+    that is equal to the sum of its own digits each raised to the power of the number of digits.
+    Input : 153: 1^3 + 5^3 + 3^3 = 1 + 125+ 27 = 153
+    Output : true
+    Input : 152: 1^3 + 5^3 + 3^3 = 1 + 125+ 8 = 134
+    Output : false
 
