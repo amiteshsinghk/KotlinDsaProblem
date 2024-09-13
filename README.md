@@ -193,4 +193,6 @@ s consists of parentheses only '()[]{}'.
 40. LCM
 41. HCF
 42. Compute average of two numbers without overflow
+43. Given a list of integers, count and return the number of times each value appears as an array of integers.
+44. 
 
