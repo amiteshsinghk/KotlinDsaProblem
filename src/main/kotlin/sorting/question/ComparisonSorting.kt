@@ -1,4 +1,4 @@
-package sorting.Question
+package sorting.question
 
 /*Quicksort usually has a running time of , but is there an algorithm that can sort even faster? In general,
 this is not possible. Most sorting algorithms are comparison sorts, i.e. they sort a list just by comparing
@@ -40,16 +40,16 @@ https://www.hackerrank.com/challenges/one-week-preparation-kit-countingsort1/pro
 */
 
 fun countingSort(arr: Array<Int>): Array<Int> {
-    var list = IntArray(100){0}
+    val list = IntArray(100){0}
     arr.forEachIndexed { _, item ->
-        var count = list[item]
+        val count = list[item]
         list[item] = count + 1
     }
     return list.toTypedArray()
 }
 
-fun main(args: Array<String>) {
-    val n = readLine()!!.trim().toInt()
+fun main() {
+    readLine()!!.trim().toInt()
 
     val arr = readLine()!!.trimEnd().split(" ").map{ it.toInt() }.toTypedArray()
 
