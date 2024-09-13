@@ -15,6 +15,26 @@ class BinaryTree {
     }
 }
 
+fun main() {
+    val listNodes = mutableListOf(1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1)
+    val tree = BinaryTree()
+    val root = tree.buildTree(listNodes)
+    println(root?.data)
+    preorderTransversal(root)
+    println()
+    inorderTraversal(root)
+    println()
+    postorderTraversal(root)
+    println()
+    levelOrderTraversal(root)
+    println()
+    println("Count of nodes :: ${countOfNodes(root)}")
+    println("Sum of nodes :: ${sumOfNode(root)}")
+    println("Height of tree ${heightOfTree(root)}")
+    println("Diameter of tree ${diameter(root)}")
+    println("Diameter of tree2 ::  ${diameter2(root)}")
+}
+
 // DFS -> Depth search property
 // In preorder transversal first print root than left subtree than right subtree.
 // Root -> leftSubtree -> RightSubtree
@@ -133,25 +153,7 @@ fun diameter2(nodeBt: NodeBt?): TreeInfo {
     return TreeInfo(height, info)
 }
 
-fun main() {
-    val listNodes = mutableListOf(1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1)
-    val tree = BinaryTree()
-    val root = tree.buildTree(listNodes)
-    println(root?.data)
-    preorderTransversal(root)
-    println()
-    inorderTraversal(root)
-    println()
-    postorderTraversal(root)
-    println()
-    levelOrderTraversal(root)
-    println()
-    println("Count of nodes :: ${countOfNodes(root)}")
-    println("Sum of nodes :: ${sumOfNode(root)}")
-    println("Height of tree ${heightOfTree(root)}")
-    println("Diameter of tree ${diameter(root)}")
-    println("Diameter of tree2 ::  ${diameter2(root)}")
-}
+
 
 /*
 * Given the roots of two binary trees root and subRoot, return true if there is a subtree of root with the
