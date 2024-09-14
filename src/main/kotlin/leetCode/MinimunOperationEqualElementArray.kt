@@ -43,9 +43,9 @@ Explanation: We can increase each value in the array to 10. The total number of 
 *
 * */
 
-fun main(){
-    var num = intArrayOf(3,1,6,8)
-    var queries = intArrayOf(1,5)
+fun main() {
+    var num = intArrayOf(3, 1, 6, 8)
+    var queries = intArrayOf(1, 5)
     println(minOperations(num, queries))
 }
 
@@ -68,18 +68,42 @@ fun minOperations(nums: IntArray, queries: IntArray): List<Long> {
     for (q in queries) {
         // Binary search to find the first index where nums[i] >= q
         val idx = nums.binarySearch(q)
-        val insertionPoint = if (idx >= 0) idx else -(idx + 1)
+        val insertionPoint = if (idx >= 0) idx else -(idx + 1) // insertionPoint =2
 
         var totalOperations = 0L
 
-        // Operations to decrease all elements greater than q
+//         Operations to decrease all elements greater than q
+//        insertionPoint < n: This checks if there are any elements greater than q. In our case, insertionPoint = 2 and n = 4, so this            condition is true. It means there are elements greater than q (6 and 8 in this case).
+//
+//        val sumRight = prefixSum[n - 1] - if (insertionPoint > 0) prefixSum[insertionPoint - 1] else 0:
+//
+//        This part computes the sum of the elements in nums that are greater than or equal to the insertion point.
+//        prefixSum[n - 1] = 18 is the sum of all elements in the array.
+//        prefixSum[insertionPoint - 1] = prefixSum[1] = 4 is the sum of the elements before the insertion point (the sum of 1 and 3).
+//        So, sumRight = 18 - 4 = 14 represents the sum of the elements 6 and 8, which are greater than q.
+//        totalOperations += sumRight - (n - insertionPoint) * q.toLong():
+//
+//        Now, we calculate how many operations are needed to decrease the elements greater than q to q.
+//        n - insertionPoint = 4 - 2 = 2, which gives us the number of elements greater than q (i.e., 6 and 8).
+//        sumRight = 14 is the sum of those elements.
+//        q.toLong() * (n - insertionPoint) = 5 * 2 = 10 is what the sum of those elements would be if they were all equal to q.
+//        The formula calculates the difference between the actual sum of those elements (sumRight = 14) and the sum they would have if           they were all equal to q (10).
+//        Operations required:14−10=4, meaning we need 4 operations to decrease 6 and 8 to 5.
 
         if (insertionPoint < n) {
             val sumRight = prefixSum[n - 1] - if (insertionPoint > 0) prefixSum[insertionPoint - 1] else 0
             totalOperations += sumRight - (n - insertionPoint) * q.toLong()
         }
 
-        // Operations to increase all elements less than q
+//        Operations to increase all elements less than q
+//        insertionPoint > 0: This checks if there are any elements smaller than 𝑞. Here, insertionPoint = 2, so the condition is true.            It means there are elements smaller than q (1 and 3 in this case).
+//        totalOperations += insertionPoint * q.toLong() - prefixSum[insertionPoint - 1]:
+//        This part calculates the number of operations required to increase the elements smaller than q to 𝑞.
+//        insertionPoint = 2 gives us the number of elements smaller than q (i.e., 1 and 3).
+//        q.toLong() * insertionPoint = 5 * 2 = 10 represents the sum these elements would have if they were all equal to q.
+//        prefixSum[insertionPoint - 1] = prefixSum[1] = 4 is the sum of the elements 1 and 3.
+//        The formula calculates the difference between the sum these elements would have if they were all q (10) and the current sum (4).
+//        Operations required: 10−4=6, meaning we need 6 operations to increase 1 and 3 to 5.
         if (insertionPoint > 0) {
             totalOperations += insertionPoint * q.toLong() - prefixSum[insertionPoint - 1]
         }
