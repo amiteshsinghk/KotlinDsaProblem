@@ -44,8 +44,8 @@ Explanation: We can increase each value in the array to 10. The total number of 
 * */
 
 fun main() {
-    var num = intArrayOf(3, 1, 6, 8)
-    var queries = intArrayOf(1, 5)
+    val num = intArrayOf(3, 1, 6, 8)
+    val queries = intArrayOf(1, 5)
     println(minOperations(num, queries))
 }
 
