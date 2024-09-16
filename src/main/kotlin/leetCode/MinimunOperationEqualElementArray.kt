@@ -113,3 +113,60 @@ fun minOperations(nums: IntArray, queries: IntArray): List<Long> {
 
     return result
 }
+
+/**
+ *
+ * https://leetcode.com/problems/minimum-moves-to-equal-array-elements-ii/description/
+ *
+ * 462. Minimum Moves to Equal Array Elements II
+
+Given an integer array nums of size n, return the minimum number of moves required to make all array elements equal.
+
+In one move, you can increment or decrement an element of the array by 1.
+
+Test cases are designed so that the answer will fit in a 32-bit integer.
+
+Example 1:
+
+Input: nums = [1,2,3]
+Output: 2
+Explanation:
+Only two moves are needed (remember each move increments or decrements one element):
+[1,2,3]  =>  [2,2,3]  =>  [2,2,2]
+Example 2:
+
+Input: nums = [1,10,2,9]
+Output: 16*/
+
+fun minMoves2(nums: IntArray): Int {
+    nums.sort()
+    val mid = nums.size /2
+    var res = 0
+    nums.forEach{
+        res+=Math.abs(nums[mid]-it)
+    }
+    return res
+}
+
+fun minMoves2nd(nums: IntArray): Int {
+    nums.sort()
+    var numSize = nums.size
+    var mid = nums[numSize /2]
+    var preSum = IntArray(numSize)
+    preSum[0] =nums[0]
+    for(i in 1 until numSize){
+        preSum[i] = preSum[i-1] + nums[i]
+    }
+
+    var index = nums.binarySearch(mid)
+    var insertionPoint = if (index >0) index else 0
+    var totalCount =0
+    if(insertionPoint <numSize){//Right Count
+        var sumRight = preSum[numSize-1] - if(insertionPoint > 0) preSum[insertionPoint-1] else 0
+        totalCount = totalCount + sumRight -(numSize-insertionPoint)*mid
+    }
+    if(insertionPoint> 0){//left count
+        totalCount = totalCount + insertionPoint * mid - preSum[insertionPoint -1]
+    }
+    return totalCount
+}
