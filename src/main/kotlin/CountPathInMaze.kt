@@ -6,8 +6,13 @@
 //|___|___|___|
 //|___|___|___|
 fun main(){
-    println(calculateTotalPath(3,3,0,0))
+    println(calculateTotalPath(3,4,0,0))
 }
+/*
+m is the row of the matrix
+n is the column of the matrix
+i and j is the coordinate of the matrix
+*/
 
 fun calculateTotalPath(m: Int, n: Int,i: Int,j: Int) : Int{
     if (i == m || j == n){
