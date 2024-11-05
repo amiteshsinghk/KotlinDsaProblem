@@ -6,34 +6,30 @@
 
 fun main() {
     printFibonacciSeries(10)
+    println()
     fibonacciTriangle(3)
 }
 
 //Write a kotlin Program to generate Fibonacci Triangle.
 //n= number of rows
 fun fibonacciTriangle(num: Int) {
-    var firstNum = 1
+    var firstNum = 0
     var secondNum = 1
-    var sum: Int
-    println(firstNum)
-    print("$secondNum ")
     for (i in 1..num) {
-        var j = i
-        while (j >= 0) {
-            sum = firstNum + secondNum
-            print("$sum ")
+        for (j in 1..i) {
+            print("$firstNum ")
+            // Calculate the next Fibonacci number
+            val next = firstNum + secondNum
             firstNum = secondNum
-            secondNum = sum
-            j--
+            secondNum = next
         }
-        println()
+        println() // Move to the next row
     }
-
 }
 
 // Write a programme to print fibonacci Series
 fun printFibonacciSeries(num: Int) {
-    var firstNum = 1
+    var firstNum = 0
     var secondNum = 1
     var sum: Int
     print("$firstNum $secondNum ")
