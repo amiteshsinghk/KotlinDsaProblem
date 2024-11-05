@@ -5,7 +5,7 @@
 //Write a kotlin Program to generate Fibonacci Triangle.
 
 fun main() {
-    printFibonacciSeries(10)
+    printFibonacciSeries(11)
     println()
     fibonacciTriangle(3)
 }
@@ -31,14 +31,10 @@ fun fibonacciTriangle(num: Int) {
 fun printFibonacciSeries(num: Int) {
     var firstNum = 0
     var secondNum = 1
-    var sum: Int
-    print("$firstNum $secondNum ")
-//  as two number is already printed. So we need to subtract the 2 from total count.
-    for (i in 1..num - 2) {
-        sum = firstNum + secondNum
-        print("$sum ")
+    for ( i in 1..num){
+        print("$firstNum ")
+        var sum = firstNum + secondNum
         firstNum = secondNum
         secondNum = sum
-
     }
 }
