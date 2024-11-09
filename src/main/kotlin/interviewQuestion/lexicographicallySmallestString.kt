@@ -4,7 +4,7 @@
 * Character such that substr appears at least once. If it is not possible to do so, return -1
 
 Note: A substring is a contiguous secquence of characters within a string. For example,"bcd" is a substring of"abcde" but "ac" is not.
-For two strings a and b of the same  length, a is lexicographically smaller tha b if ai< bi for some 0<= i < |a|, and aj = bj  for all 0<= j<= i.
+For two strings a and b of the same  length, a is lexicographically smaller than b if ai< bi for some 0<= i < |a|, and aj = bj  for all 0<= j<= i.
 
 Example
 word ="as?b?e?gf"
