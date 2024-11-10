@@ -8,7 +8,7 @@ For example the following list has a recurrence of the value 3 initially
 3,4,3,6
 head =3 tail = 6
 
-3 at the position of 2 is redudent So remove the 3 and the lisnkedList will be
+3 at the position of 2 is redudent So remove the 3 and the linkedList will be
 3,4,6
 
 here head = 3 and tail = 6
