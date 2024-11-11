@@ -2,20 +2,21 @@ package interviewQuestion.amazon
 
 /*
 *
-An Amazon Fulfillment Associate has a set of items that need to be packed into two boxes. Given an integer array of the item weights(arr)
-to be packed, divide the item weights into two subsets, A and B, for packing into the associated boxes, whilerespecting the following conditions:
+An Amazon Fulfillment Associate has a set of items that need to be packed into two boxes.
+* Given an integer array of the item weights(arr) to be packed, divide the item weights
+* into two subsets, A and B, for packing into the associated boxes, while respecting the following conditions:
 
 1)The intersection of A and B is null ( intersection means element in both list)
-2)The Union A and B is equal to the original array.
+2)The Union A and B is equal to the original array. ++(union means total number of element in both list)
 3)The number of elements in subset A is minimal.
 4)The sum of A's weights is greater than the sum of B's weight.
- Return the subset A in increasing order where the sum of A's weights is greater than the sum pf B's weights. If more than one subset A exits
- return the one with the maximal total weight.
+ Return the subset A in increasing order where the sum of A's weights is greater than the
+ sum of B's weights. If more than one subset A exits return the one with the maximal total weight.
 
  Example
  n= 5
  arr =[3,7,5,6,2]
- The 2 subsets in arr that satify the conditions for A are[5,7] and [6,7]:
+ The 2 subsets in arr that satisfy the conditions for A are[5,7] and [6,7]:
  1) A is minimal (size 2)
  2) Sum(A) =(5+7) = 12> Sum(B) =(2+3+6) = 11
  3) Sum(A) =(6+7)= 13 > Sum(B) =(2+3+5) = 10
