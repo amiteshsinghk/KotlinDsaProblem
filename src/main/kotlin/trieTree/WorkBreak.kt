@@ -19,7 +19,7 @@ class TrieTree{
 fun insertTrieTreeData(word: String){
     var current = rootTrie
     word.forEachIndexed { i, c ->
-       var index = word[i] -'a'
+       val index = word[i] -'a'
         if (current.Node[index] == null){
             current.Node[index] = TrieTree.TrieNode()
         }
@@ -31,7 +31,7 @@ fun insertTrieTreeData(word: String){
 fun searchTrieTreeData(word: String): Boolean{
     var current = rootTrie
     word.forEachIndexed { i, c ->
-        var index = word[i] - 'a'
+        val index = word[i] - 'a'
         if (current.Node[index] == null){
             return false
     }
@@ -48,9 +48,9 @@ fun wordBreak( key: String): Boolean{
         return true
     }
     key.forEachIndexed { index, c ->
-        var firstStr = key.substring(0,index+1)// substring(0, index + 1) extracts a substring from the start of the string (index 0) up to
+        val firstStr = key.substring(0,index+1)// substring(0, index + 1) extracts a substring from the start of the string (index 0) up to
         // (but not including) the character at index + 1, effectively returning the substring from the start of the string to the index position
-        var secondStr= key.substring(index+1)// substring(index + 1) extracts a substring starting from the character right after index (i.e., index + 1) to the end of the string
+        val secondStr= key.substring(index+1)// substring(index + 1) extracts a substring starting from the character right after index (i.e., index + 1) to the end of the string
         if (searchTrieTreeData(firstStr) && wordBreak(secondStr)) return true
     }
     return false
