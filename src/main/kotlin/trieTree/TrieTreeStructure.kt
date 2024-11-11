@@ -30,7 +30,7 @@ fun insertTrieTree(word: String) {
 
 fun searchTrieTree(word: String): Boolean {
     var current = root
-    for (i in word.indices) {
+    for (i in word.indices) { //O(L) L== word length
         val index = word[i] - 'a'
         if (current.children[index] == null) return false
         if ((i == word.length - 1) && current.children[index]?.eow == false) {
