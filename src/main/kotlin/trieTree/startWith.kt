@@ -10,6 +10,7 @@ prefix = "moon" output: false
 
 class TrieStart{
     var NodeTrie: Array<TrieStart?> = arrayOfNulls(26)
+    var eow: Boolean = false
 }
 
 var rootStart = TrieStart()
@@ -18,6 +19,7 @@ fun insertTrieStart(word: String){
     for (i in 0.. word.length-1){
         var index = word[i] - 'a'
         if (current.NodeTrie[index] == null) current.NodeTrie[index] = TrieStart()
+        if (i == word.length-1) current.eow = true
         current = current.NodeTrie[index]!!
     }
 
