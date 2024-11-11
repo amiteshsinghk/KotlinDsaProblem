@@ -43,6 +43,19 @@ fun searchTrieTreeData(word: String): Boolean{
     return true
 }
 
+//fun wordBreakWithoutRecur(s:String, list: List<String>): Boolean{
+//    val dp = BooleanArray(s.length+1)
+//    dp[0] = true
+//    for (i in 1..s.length){
+//        for (j in 0 until i){
+//            if (s.substring( j, i) in list && dp[j]){
+//                dp[i]= true
+//            }
+//        }
+//    }
+//    return dp[s.length]
+//}
+
 fun wordBreak( key: String): Boolean{
     if (key.length ==0){
         return true
@@ -61,5 +74,5 @@ fun main() {
     word.forEachIndexed { _, s ->
         insertTrieTreeData(s)
     }
-    println(wordBreak("ilikesamsung"))
+    println(wordBreak("ilikesung"))
 }
