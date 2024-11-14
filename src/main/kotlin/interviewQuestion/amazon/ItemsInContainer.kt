@@ -254,7 +254,6 @@ fun main(){
     println(numberOfItems(s, startIndices, endIndices)) // Expected output: [2, 3]
 }
 
-
 fun numberOfItems(s: String, startIndices: IntArray, endIndices: IntArray): List<Int> {
     val n = s.length
     val itemCount = IntArray(n)
