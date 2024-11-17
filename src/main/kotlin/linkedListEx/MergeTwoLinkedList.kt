@@ -35,6 +35,9 @@ class ListNode(var `val`: Int) {
 
 // Function to merge two sorted lists
 fun mergeTwoLists(list1: ListNode?, list2: ListNode?): ListNode? {
+    if(list1 == null && list2 == null) return null
+    if(list1 == null && list2 != null) return list2
+    if(list1 != null && list2 == null) return list1
     val dummy = ListNode(0) // Dummy node
     var current = dummy
 
