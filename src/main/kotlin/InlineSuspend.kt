@@ -9,7 +9,7 @@ suspend fun main(){
 }
 
 inline fun passMeSuspendingFunction(abc:()-> String): String{
-    return abc.invoke()
+    return abc()
 }
 
 suspend fun printMe(): String{
