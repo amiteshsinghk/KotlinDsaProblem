@@ -10,10 +10,10 @@ fun main() {
 fun countCharacter(s:String){
     var nonRepeatChar= s.toSet()
     nonRepeatChar.forEachIndexed(){index, chars->
-        var vount =0
+        var count =0
         for(i in 0..s.length-1){
-            if(chars == s[i]) vount= vount+1
+            if(chars == s[i]) count += 1
         }
-        if (vount >0)println("count of $chars is $vount")
+        if (count >0)println("count of $chars is $count")
     }
 }
