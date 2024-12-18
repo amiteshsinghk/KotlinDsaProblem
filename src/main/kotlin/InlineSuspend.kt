@@ -1,3 +1,5 @@
+import kotlinx.coroutines.delay
+
 /*
 * As per document suspending function call be from from another suspending function or form a coroutine scope.
 * A work around is this where we are passing a suspending function in a non suspending function using inline keyword.
@@ -13,7 +15,7 @@ inline fun passMeSuspendingFunction(abc:()-> String): String{
 }
 
 suspend fun printMe(): String{
-//    delay(1000)
+    delay(1000)
     return "Application :: I m suspending function "
 }
 
