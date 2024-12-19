@@ -28,9 +28,25 @@ Only one valid answer exists.
 * */
 
 fun main() {
-    val i= intArrayOf(3,2,4)
+    val i= intArrayOf(1,3, 2, 3, 4, 5,3)
     println(twoSum(i,6).joinToString())
+    println(findTwoSum(i.toList(),6))
 
+}
+
+fun findTwoSum(numbers: List<Int>, target: Int): List<Pair<Int, Int>> {
+    val seen = mutableSetOf<Int>()
+    val result = mutableSetOf<Pair<Int, Int>>()
+
+    for (num in numbers) {
+        val complement = target - num
+        if (seen.contains(complement)) {
+            result.add(Pair(complement, num))
+        }
+        seen.add(num)
+    }
+
+    return result.toList()
 }
 
 fun twoSum(nums: IntArray, target: Int) : IntArray{
