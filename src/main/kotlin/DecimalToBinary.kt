@@ -22,8 +22,13 @@ The binary representation is the sequence of remainders read from bottom to top.
 fun main() {
     println(convertDecimalToBinary(19))
     println(binaryToDecimals("10001"))
+    println(convertBinaryToDecimalHack(10011))
 }
 
+fun convertBinaryToDecimalHack(binary:Int):Int{
+    return binary.toString().toInt(2)
+
+}
 //Write a Program to Change Binary to Decimal Number?
 fun binaryToDecimals(binary: String): Int {
     var decimal = 0
