@@ -23,6 +23,11 @@ fun main() {
     println(convertDecimalToBinary(19))
     println(binaryToDecimals("10001"))
     println(convertBinaryToDecimalHack(10011))
+    println(decimalToBinarys(19))
+}
+
+fun decimalToBinarys(num:Int):Int{
+    return num.toString(2).toInt()
 }
 
 fun convertBinaryToDecimalHack(binary:Int):Int{
