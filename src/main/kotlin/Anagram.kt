@@ -32,8 +32,8 @@ fun checkAnagram(s1:String, s2:String){
       return
   }
     //Here string is converted to char array and sorted in ascending order.
-    val item1= s1.toLowerCase().toCharArray().sorted()
-    val item2 = s2.toLowerCase().toCharArray().sorted()
+    val item1= s1.lowercase().toCharArray().sorted()
+    val item2 = s2.lowercase().toCharArray().sorted()
     if (item1 == item2) println("$s1 and $s2 is Anagram.")
     else println("$s1 and $s2 is not Anagram.")
 }
