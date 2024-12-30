@@ -29,14 +29,11 @@ fun findAllPrimeNumber(n: Int){
 }
 
 fun checkNumberIsPrimeNumber(s: Int): Boolean {
-    if (s == 0 || s == 1 || s == 2) return false
-    val num = s / 2
-    var isPrime = true
-    for (i in 2 until num) {
+    if (s <= 1) return false
+    for (i in 2.. s/2){
         if (s % i == 0) {
-            isPrime = false
-            break
+            return false
         }
     }
-    return isPrime
+    return true
 }
