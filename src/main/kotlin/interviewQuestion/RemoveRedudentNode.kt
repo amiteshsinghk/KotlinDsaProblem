@@ -29,7 +29,7 @@ fun main(){
     i.next?.next?.next?.next?.next?.next?.next?.next = SinglyLinkedListNode(4)
     val result = condense(i)
     var current = result
-    while (current?.next != null){
+    while (current?.data != null){
         print("${current.data} ")
         current = current.next
 
