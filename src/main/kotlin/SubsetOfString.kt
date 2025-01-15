@@ -7,14 +7,16 @@ fun main(){
 fun subsetOfString(s:String){
     val strLength = s.length
     val list = mutableListOf<String>()
-    val totalSubset = strLength*(strLength+1)/strLength //To find the total number of subsets n(n+1)/2
+    val totalSubset = strLength*(strLength+1)/2 //To find the total number of subsets n(n+1)/2
     for (i in 0.. totalSubset){
         for ( j in i.. strLength){
             if (j+1 <= strLength){
                 val item = s.substring(i, j + 1)
+                println("item==> $item :: i==> $i :: j==> $j")
                 list.add(item)
             }
         }
     }
     println(list)
 }
+
