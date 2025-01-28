@@ -1,18 +1,7 @@
 //Reverse a number.
 fun main(){
-println(reverseNum(1234))
+println(reverseANumber(1234))
 }
-fun reverseNum(num: Int): Int{
-    var item = num
-    var newNum = 0
-    while (item> 0){
-        var i = item % 10
-        newNum = newNum *10 + i
-        item = item /10
-    }
-     return newNum
-}
-
 
 fun reverseANumber(i : Int): Int{
     var num = i
