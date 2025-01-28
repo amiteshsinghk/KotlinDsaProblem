@@ -1,4 +1,5 @@
 // Program to Check if a Given String is Palindrome
+//A palindrome is a word, sentence, verse, or even number that reads the same backward or forward
 
 fun main(){
     println(isPalindrome("0P"))
