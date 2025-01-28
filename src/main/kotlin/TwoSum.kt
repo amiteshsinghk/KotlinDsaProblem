@@ -29,7 +29,7 @@ Only one valid answer exists.
 
 fun main() {
     val i= intArrayOf(1,3, 2, 3, 4, 5,3)
-    println(twoSum(i,6).joinToString())
+    println(twoSumIndices(i,6).joinToString())
     println(findTwoSum(i.toList(),6))
 
 }
@@ -49,7 +49,7 @@ fun findTwoSum(numbers: List<Int>, target: Int): List<Pair<Int, Int>> {
     return result.toList()
 }
 
-fun twoSum(nums: IntArray, target: Int) : IntArray{
+fun twoSumIndices(nums: IntArray, target: Int) : IntArray{
     var arra = intArrayOf()
     loop@  for(i in nums.indices){
         for(j in i+1 until(nums.size)){
